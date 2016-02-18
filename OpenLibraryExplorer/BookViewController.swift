@@ -44,7 +44,7 @@ class BookViewController: UIViewController {
 				let text = String(data: data!, encoding: NSUTF8StringEncoding)
 				self.bookTextView.text = text
 			} else {
-				let alertController = UIAlertController(title: self.isbn, message: "Ocurrió un error al tratar de acceder el libro solicitado. Código: \(error!.code)", preferredStyle: UIAlertControllerStyle.Alert)
+				let alertController = UIAlertController(title: self.isbn, message: "Ocurrió un error al tratar de acceder el libro solicitado (\(error!.code)). Verifica tu conexión a Internet", preferredStyle: UIAlertControllerStyle.Alert)
 				alertController.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.Default, handler: nil))
 				self.presentViewController(alertController, animated: true, completion: nil)
 			}
